@@ -1,0 +1,2 @@
+# Info-Wettkamp
+Informatik Arrays
