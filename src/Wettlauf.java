@@ -63,6 +63,8 @@ public class Wettlauf
         sortieren();
         evaluateQuali();
         ausgeben();
+        System.out.println(schnellstenErmitteln().gibName());
+        System.out.println("Durchschnittliche Laufzeit:" + durchschnittBerrechnen());
                 
         //Qualifizieren
         
@@ -97,4 +99,19 @@ public class Wettlauf
         lauf.rennenLaufen();
 
     }
+
+    public Laeufer schnellstenErmitteln(){
+
+        return laeuferfeld [0];
+    }
+
+    public double durchschnittBerrechnen(){
+        double summe = 0.00;
+        for(int i = 0; i < laeuferfeld.length; i++) {
+            summe += laeuferfeld[i].gibZeit();
+        }
+        return summe / laeuferfeld.length;
+
+    }
 }
+
