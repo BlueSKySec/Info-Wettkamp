@@ -36,5 +36,10 @@ public class TestQueue {
         System.out.println("Funktioniert alles, wenn vorher kein Fehler angezeigt wurde.");
     }
 
+    public static void main(String[] args) {
+        TestQueue test = new TestQueue();
+        test.testThisQueue();
+    }
+
 }
 

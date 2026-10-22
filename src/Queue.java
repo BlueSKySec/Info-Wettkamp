@@ -46,7 +46,12 @@ public class Queue {
      * Falls die Schlange leer ist, wird sie nicht veraendert.
      */
     public void dequeue() {
-        
+        if (! isEmpty()) {
+            head = head.next();
+            if (head == null) {
+                tail = null;
+            }
+        }
     }
 
 
@@ -57,6 +62,10 @@ public class Queue {
      *
      */
     public Patient front() {
-        
+        if (isEmpty()) {
+            return null;
+        } else {
+            return head.content();
+        }
     }
 }
